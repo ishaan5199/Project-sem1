@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <style type="text/css">
+            body{
+                background:url("a485560cd5166263f3514f5d30080181.jpg") no-repeat fixed center;
+                background-size:cover;
+            }
+            .hd{
+                color:rgb(177, 147, 147);
+                text-align:center;
+                text-decoration: underline overline;
+                text-shadow: 6px 6px 10px rgb(101, 138, 138);
+            }
+            .note{
+                color:tomato;
+                font:oblique small-caps 20px "Tw Cen MT";
+            }
+            .begn{
+                background:url("img_3037.jpg") no-repeat fixed center;
+                background-size:cover;
+                border-radius:35px;
+            }
+            .st{
+                color:whitesmoke;
+                text-indent:5px;
+                text-align:center;
+                text-decoration: underline;
+                font: 60px Playbill;
+            }
+            img,video{
+                border:5px solid rgb(175, 226, 182);
+                border-radius:35px;
+                object-fit: fill;
+                transition: transform .5s ease;
+                
+            }
+            img:hover,video:hover{
+                transform: scale(1.2); 
+            }
+            .page,.off{
+                color:whitesmoke;
+                font:italic small-caps 20px Broadway;
+            }
+            .off{
+                
+                list-style: square inside;
+            }
+            a:link {color: #ff6600;}
+            a:visited {color: #ffffff;}
+            a:hover {color: #ffcc00;}
+            a:active {color:rgb(105, 172, 60)};
+        </style>
+        <script language="javascript">
+            function video1(){
+                document.getElementById("vid1").innerHTML='<video autoplay muted loop height="200" width="300" onmouseout="video1_1()"><source type="video/mp4" src="main - sw.mp4"></video>';
+            }
+            function video1_1(){
+                document.getElementById("vid1").innerHTML='<img src="main_pic_sw.png" height="200" width="300" onmouseover="video1()">'
+            }
+            function video2(){
+                document.getElementById("vid2").innerHTML='<video autoplay muted loop height="200" width="300" onmouseout="video2_1()"><source type="video/mp4" src="main - m.mp4"></video>';
+            }
+            function video2_1(){
+                document.getElementById("vid2").innerHTML='<img src="main_pic_m.png" height="200" width="300" onmouseover="video2()">'
+            }
+            function video3(){
+                document.getElementById("vid3").innerHTML='<video autoplay muted loop height="200" width="300" onmouseout="video3_1()"><source type="video/mp4" src="main - mi.mp4"></video>';
+            }
+            function video3_1(){
+                document.getElementById("vid3").innerHTML='<img src="main_pic_mi.jpg" height="200" width="300" onmouseover="video3()">'
+            }
+            function video4(){
+                document.getElementById("vid4").innerHTML='<img src="main - ij.gif" height="200" width="300" onmouseout="video4_1()">'
+            }    
+            function video4_1(){
+                document.getElementById("vid4").innerHTML='<img src="main_pic_ij.jpg" height="200" width="300" onmouseover="video4()">'
+            }
+        </script>
+    </head>
+    <body>
+        <div class="note"><br>
+            <h1 class="hd">Films & Television</h1>
+            <p>I have been watching Films and Television Shows since i was a kid. My Dad introduced me to hollywood film franchises when i was in 3<sup>rd</sup> or 4<sup>th</sup> standard, like The MCU (It was not MCU back then), Indiana Jones, Aliens, Terminator, Mission Impossible and many more. Since then i have only expanded my library and i will continue to do so. This project is dedicated to all the film franchises that i like and have watched and followed for so many years.</p>
+        </div>
+        <div class="begn"><br>
+            <h2 class="st">FILM FRANCHISES</h2>
+            <table align="center" cellspacing="40"><tr>
+            <td>
+                <a href="sw.html" target="_blank"><span id="vid1"><img src="main_pic_sw.png" height="200" width="300" onmouseover="video1()"></span></a>
+            </td>
+            <td>
+                <a href="marvel.html" target="_blank"><span id="vid2"><img src="main_pic_m.png" height="200" width="300" onmouseover="video2()"></span></a>
+            </td>
+            <td>
+                <a href="mi.html" target="_blank"><span id="vid3"><img src="main_pic_mi.jpg" height="200" width="300" onmouseover="video3()"></span></a>
+            </td>
+            <td>
+                <a href="ij.html" target="_blank"><span id="vid4"><img src="main_pic_ij.jpg" height="200" width="300" onmouseover="video4()"></span></a>
+            </td></tr></table><br><br><br><br>
+        </div>
+        <div class="begn2"><br><h3 class="page">Official/Fandom Pages : </h3>
+        <ul class="off">
+            <li><a href="https://www.starwars.com" target="_blank">STAR WARS</a></li>
+            <li><a href="https://www.marvel.com/movies" target="_blank">MARVEL STUDIOS</a></li>
+            <li><a href="https://missionimpossible.fandom.com/wiki/Main_Page" target="_blank">MISSION IMPOSSIBLE</a></li>
+            <li><a href="https://indianajones.fandom.com/wiki/Main_Page" target="_blank">INDIANA JONES</a></li>
+        </ul><br></div>
+    </body>
+</html>

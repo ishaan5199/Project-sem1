@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INDIANA JONES</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Redressed&display=swap" rel="stylesheet">
+        <link rel="icon" href="art143.jpg" type="image/icon type">
+        <style type="text/css">
+            html{
+                background:url("https://bn1301files.storage.live.com/y4mwUvHc6b_Sp2OHfFbEUDodFqbPE94xeZ4r0v28bLM1rd2OFvk3Lq9RuZjvwzNydephWUIzNKOyBuIvJrV4KRA8lquVrTCnFAeBbhPRdu85SuLI47j5IyHupO16hMspicmtgXUenDlt418j0OcNvytwYp62Q0_IFYDiuucmE7_zPTKUlnIYaKNwl68thIIjnwq?width=1280&height=1007&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+            }
+            .logo{
+                text-align:center;
+                font: bold 100px "SF Fedora","Caveat","Redressed";
+                color:rgb(109, 66, 9)
+            }
+            .about{
+                background: url("https://bn1301files.storage.live.com/y4mdidcEkkexJF2WCmphj9P_KHDJsWLNxNHO15K2TyNOrculQ8rE4cqJB695y96Nr5cSvUdu--R0kdf2ojPYZGV88tlrWckgO4mQm6vF852u0sGtyhcrtMipsdmOOSSlSBvoqX_NT51J0dqlF3hDxKX4WNDsf0Et4rkgnSOeCpc3kNGmvnR_fjjZrA2pxbBxbZ4?width=1200&height=676&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+                font: 20px Impact;
+                height:300px;
+                vertical-align: bottom;
+                display: table-cell;
+                text-align:center;
+                clip-path: polygon(2% 67%, 1% 83%, 4% 95%, 15% 97%, 34% 97%, 46% 94%, 58% 95%, 70% 92%, 82% 95%, 96% 94%, 97% 74%, 98% 63%, 97% 46%, 96% 27%, 96% 14%, 95% 5%, 71% 7%, 60% 6%, 52% 9%, 39% 5%, 27% 8%, 15% 9%, 1% 6%, 2% 16%, 2% 32%, 2% 43%, 5% 56%);
+            }
+            .spec{
+                text-align:center;
+                text-decoration: underline;
+                font: 20px "SF Fedora";
+            }
+            .chrono{
+                background:rgba(145, 132, 17,0.5);
+                color:azure;
+                font: oblique small-caps 15px "SF Fedora";
+                border-radius:10px;
+                box-shadow:10px 10px 10px black;
+            }
+            li{
+                height:50px;
+                width:200px;
+                background-color:rgb(54, 47, 38);;
+                transition: width 2s;
+                animation: shakein 2s;
+                animation-iteration-count: 2;
+            }
+            li:hover{
+                width:400px;
+                animation: shake 2s;
+            }
+            
+            @keyframes shake {
+                0% { transform: translate(1px, 1px)  }
+                10% { transform: translate(-1px, -2px)}
+                20% { transform: translate(-3px, 0px)}
+                30% { transform: translate(3px, 2px)}
+                40% { transform: translate(1px, -1px)}
+                50% { transform: translate(-1px, 2px)}
+                60% { transform: translate(-3px, 1px)}
+                70% { transform: translate(3px, 1px)}
+                80% { transform: translate(-1px, -1px)}
+                90% { transform: translate(1px, 2px)}
+                100% { transform: translate(1px, -2px)}
+            }
+            @keyframes shakein {
+                0% { transform: translate(1px, 1px)  }
+                10% { transform: translate(-1px, -2px)}
+                20% { transform: translate(-3px, 0px)}
+                30% { transform: translate(3px, 2px)}
+                40% { transform: translate(1px, -1px)}
+                50% { transform: translate(-1px, 2px)}
+                60% { transform: translate(-3px, 1px)}
+                70% { transform: translate(3px, 1px)}
+                80% { transform: translate(-1px, -1px)}
+                90% { transform: translate(1px, 2px)}
+                100% { transform: translate(1px, -2px)}
+            }
+            #one:hover span{display:none}
+            #one:hover:before {content:"Raiders of The Lost Ark release year : 1996"}
+            #two:hover span{display:none}
+            #two:hover:before {content:"Temple of Doom release year : 2000"}
+            #three:hover span{display:none}
+            #three:hover:before {content:"The Last Crusade release year : 2006"}
+            #four:hover span{display:none}
+            #four:hover:before {content:"Kingdom of The Crystal Skull release year : 2011"}
+            #five:hover span{display:none}
+            #five:hover:before {content:"Part 5 release year : 2015"}
+            .prominent_director{
+                color:rgb(19, 8, 20);
+                text-align:center;
+                font:20px Stencil;
+                
+            }
+            .lastcut{
+                background-color: rgba(112, 72, 13, 0.596);
+                clip-path: polygon(0% 70%, 1% 83%, 2% 97%, 17% 98%, 27% 100%, 43% 100%, 61% 100%, 72% 97%, 82% 98%, 96% 97%, 99% 87%, 99% 70%, 98% 58%, 99% 40%, 98% 26%, 100% 0%, 85% 0%, 70% 0%, 58% 2%, 44% 0%, 28% 1%, 12% 0%, 0% 0%, 1% 18%, 0% 33%, 0% 44%, 0% 56%);
+            }
+            a:link {color: #ff6600;}
+            a:visited {color: #ffffff;}
+            a:hover {color: #ffcc00;}
+            a:active {color:rgb(105, 172, 60)};
+            
+        </style>
+        <script language="javascript">
+            function Sound(){
+                var stone=document.getElementById("door");
+                stone.play();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="logo">INDIANA JONES</div><br><br>
+        <div class="about">
+            <p style="background:lightgray;opacity:0.5">Indiana Jones is an American media franchise based on the adventures of Dr. Henry Walton "Indiana" Jones, Jr., a fictional professor of archaeology, that began in 1981 with the film Raiders of the Lost Ark.</p><br>
+        </div><br><br>
+        <div class="mid"><br><br><div class="spec">HIDDEN OBJECTS GAME</div> 
+        <center><div class="upcoming" id="up">
+            <iframe style="clip-path: polygon(0% 70%, 1% 83%, 0% 98%, 17% 95%, 34% 97%, 46% 94%, 57% 93%, 72% 95%, 82% 95%, 98% 96%, 98% 83%, 98% 68%, 98% 57%, 98% 35%, 98% 22%, 99% 6%, 71% 7%, 60% 6%, 52% 9%, 39% 5%, 27% 8%, 15% 9%, 1% 6%, 0% 18%, 0% 33%, 0% 44%, 0% 56%);width:1500px;height:850px;" src="game3.html" title="game"></iframe>
+        </div></center><br><br></div><br><br>
+        <div class="chrono"><p>Chronological Order of Films</p>
+            <ul style="list-style-type: square;"><li id="one" onmouseover="Sound()" onmouseout="Sound()"><span>Raiders of The Lost Ark</span></li><br><li id="two" onmouseover="Sound()" onmouseout="Sound()"><span>Temple of Doom</span></li><br><li id="three" onmouseover="Sound()" onmouseout="Sound()"><span>The Last Crusade</span></li><br><li id="four" onmouseover="Sound()" onmouseout="Sound()"><span>Kingdom of The Crystal Skull</span></li><br><li id="five" onmouseover="Sound()" onmouseout="Sound()"><span>Part 5</span></li><br></ul></div>
+            <audio id="door" onmouseover="Sound()" onmouseout="Sound()"><source src="Stone.m4a"></audio>
+        <div class="prominent_director"><h1 align="center" style="font:30px 'SF Fedora';color:rgb(66, 47, 7)">Steven Spielberg & George Lucas</h1>
+            <center><img src="https://bn1301files.storage.live.com/y4md9CvbsmDJB8Q0tENM4hFBzZOD9C7xMkQrUkRLf4u6EIF2hthZ-cnh9VRm6Zphr9pQvKwqd9XKLgZROs9buZi1E0IpoUn9qQSSzEIszXOmAipVUIG8G3iOH16COuhxWpOOVVhZmN9oH4pwuxeuIXXCukriDYN1InuEZmXwr7yu7lt44ZZ0bSEl40Dm8P1IrCW?width=330&height=463&cropmode=none" width="330" height="432">&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/George_Lucas_cropped_2009.jpg/330px-George_Lucas_cropped_2009.jpg" width="330" height="432"></center>
+            <p class="lastcut">During 1973, George Lucas wrote The Adventures of Indiana Smith. Like Star Wars, it was an opportunity to create a modern version of the movie serials of the 1930s and 1940s.<br><br>
+                In May 1977, Lucas was in Maui, trying to escape the enormous success of Star Wars. His friend and colleague Steven Spielberg was also there, on vacation from work on Close Encounters of the Third Kind. Spielberg told Lucas he was interested in making a James Bond film, but Lucas told him of an idea "better than James Bond", outlining the plot of Raiders of the Lost Ark. Spielberg loved it, calling it "a James Bond film without the hardware", and had the character's surname changed to Jones. Spielberg and Lucas made a deal with Paramount Pictures for five Indiana Jones films.
+                <br><br>The last film released was Kingdom of The Crystal Skull in 2008.<br><br>The Fifth Part with Harrison Ford reprising his role as Indiana Jones Jr. and James Mangold directing (No particulat title as of yet) is set to release in cinemas on July 29, 2022.
+            </p></div><br><br>
+    </body>
+</html>

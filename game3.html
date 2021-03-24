@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hidden Objects</title>
+        <link rel="icon" href="PS4-Controller-Step-10.png" type="image/icon type">
+        <script language="javascript">
+            var seconds=-1,minutes=0,hours=0,watch,counter=1;
+            function start(){
+                document.getElementById("srt").innerHTML='';
+                watch=setInterval(timer,1000);
+                function timer(){
+                    seconds++;
+                    if(seconds<10)
+                        document.getElementById("ck").innerText=`0${hours}:0${minutes}:0${seconds}`;
+                    else if(seconds>=10&&minutes<10)
+                        document.getElementById("ck").innerText=`0${hours}:0${minutes}:${seconds}`;
+                    else if(seconds>=10&&minutes>=10)
+                        document.getElementById("ck").innerText=`0${hours}:${minutes}:${seconds}`;
+                    if(seconds%60==59){
+                        minutes++;
+                        seconds=-1;
+                    }
+                    if(minutes%60==59) {
+                        hours++;
+                        minutes=0;
+                    }
+                }
+            }
+            function check(){
+                if(seconds>-1){
+                if(counter<7){
+                    
+                    document.getElementById("count").innerHTML=`Counter : ${counter}`;
+                    counter++;
+                }
+                else if(counter==7){
+                    clearInterval(watch);
+                    document.getElementById("img").height="300";
+                    document.getElementById("img").width="600";
+                    document.getElementById("count").innerHTML=`Counter : ${counter}`;
+                    document.getElementById("rib").innerHTML='Time Taken will appear here';
+                    document.getElementById("rib").innerHTML=`Congratulations!!, You have found all the 7 objects`;
+                    document.getElementById("upribbon").innerHTML='';
+                    document.getElementById("final").innerHTML='<textarea id="scor" rows="1" cols="35" disabled autofocus><b></b></textarea>';
+                    document.getElementById("scor").value=`Time Taken : ${minutes} min(s) ${seconds} sec(s)`;
+                }}
+            }
+        </script>
+        <style type="text/css">
+            .hd{
+                text-align:center;
+            }
+            body{
+                scroll-behavior: smooth;
+                background-color:rgb(97, 92, 28);
+                font: 20px "SF Fedora";
+            }
+            #st{
+                background-color: rgb(250, 250, 250);
+                padding: 5px 10px;
+                color:black;
+                text-align: center;
+                cursor: crosshair;
+                box-shadow:5px 5px 5px rgb(78, 55, 4);
+                border-radius:35px;
+                font-family: "SF Fedora";
+            }
+            #image,#img{
+                background:rgb(61, 50, 50);
+                border-radius:35px;
+            }
+            
+            #ribbon,#upribbon{
+                background:darkslategray;
+                border-radius:35px;
+                width:800px;
+                color:whitesmoke;
+            }
+            textarea{
+                background:wheat;
+                border-radius:35px;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>    
+        <div class="hd">Hidden Object Game</div><br><br>
+        <div class="timer"><center><span class="clock" id="ck">00:00:00</span><span id="srt">&nbsp;&nbsp;<button id="st" onclick="start()">START</button></span></center></div><br>
+        <div id="image"><br><span id="count">Counter : 0</span><table cellpadding="0" align="center"><tr><th><div id="upribbon">Objects : JerryCan | Backpack | Gun | Bird | Bottle | Shovel | Crate</div></th></tr><tr><th><img src="1_OlF2bamBUrKDWpEXYMemUw.png" id="img"  width="800px" height="500px" usemap="#pic"></th></tr>
+        <map name="pic" id="map">
+            <area onclick="check(); this.onclick=null;" coords="744,261 750,257 759,256 768,256 778,257 785,258 785,265 785,273 786,286 786,298 787,308 788,319 788,323 785,325 780,325 766,325 755,325 746,325 744,316 745,304 746,290 745,279 744,265 744,268 747,260 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="118,280 123,280 131,280 136,282 140,288 140,290 143,295 143,299 144,305 144,309 137,314 129,316 118,317 111,313 108,308 108,302 112,299 115,293 117,288 117,283 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="655,315 663,317 672,322 683,328 692,335 701,340 708,344 716,349 722,352 728,357 737,367 743,378 754,386 759,390 765,394 770,398 776,403 776,407 772,407 768,409 767,412 763,415 760,418 759,421 756,425 751,425 749,417 748,408 744,402 740,395 731,383 736,389 724,383 718,382 718,377 720,375 716,369 716,368 714,368 709,362 702,357 692,351 684,344 679,339 676,335 671,332 665,328 659,322 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="694,191 699,183 714,180 724,175 735,171 745,156 755,135 762,123 762,133 753,149 746,166 748,172 757,173 752,178 738,187 735,203 729,205 718,204 714,197 704,191 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="400,468 410,464 416,464 420,455 428,455 438,452 449,447 456,448 458,456 458,463 449,464 440,468 431,471 420,472 412,472 403,472 397,474 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="104,393 107,390 108,386 110,383 113,382 115,382 118,374 119,366 122,357 124,347 128,323 132,319 134,325 133,331 130,339 129,348 126,362 122,376 127,381 128,386 126,394 122,395 117,398 113,397 109,395 108,394 " shape="polygon">
+            <area onclick="check(); this.onclick=null;" coords="285,131 294,127 302,122 311,118 318,120 325,122 334,123 341,126 342,134 342,143 342,153 335,159 326,160 318,162 300,160 292,158 288,154 288,143 287,138 " shape="polygon">            
+        </map><tr><th><div id="ribbon"><div id="rib"></div><br><div id="final"></div></th></tr></table><br></div>
+        
+    </body>
+</html>

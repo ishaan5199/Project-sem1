@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mission Accomplished</title>
+        <link rel="icon" href="PS4-Controller-Step-10.png" type="image/icon type">
+        <script language="javascript">
+            var seconds=60,minutes=0,hours=0,watch,a=5;
+            function start(){
+                document.getElementById("srt").innerHTML='';
+                document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Order Eg- 1,2,3,4,5,6" autofocus>';
+                watch=setInterval(timer,1000);
+                function timer(){
+                    if(seconds>0){
+                        seconds--;
+                        document.getElementById("ck").innerHTML=`00:00:${seconds}`;
+                    }
+                    else if(seconds==0){
+                        document.getElementById("ribbon").innerHTML="MISSION FAILED!!! Better Luck Next Time";
+                        document.getElementById("ribbon").style.textAlign="center";
+                        document.getElementById("img").innerHTML='<table align="center"><tr><th><img src="image_1_1.jpeg"></th><th><img src="image_1_2.jpeg"></th><th><img src="image_1_3.jpeg"></th></tr><tr><th><img src="image_2_1.jpeg"></th><th><img src="image_2_2.jpeg"></th><th><img src="image_2_3.jpeg"></th></tr></table>';
+                    }
+                }
+            }
+            function check(){
+                    var or=document.getElementById("ans").value;
+                    if(parseInt(or.charAt(0))==1&&parseInt(or.charAt(2))==6&&parseInt(or.charAt(4))==3&&parseInt(or.charAt(6))==2&&parseInt(or.charAt(8))==5&&parseInt(or.charAt(10))==4){
+                        clearInterval(watch);
+                        alert("!! MISSION ACCOMPLISHED !!");
+                        document.getElementById("ribbon").innerHTML="";
+                        document.getElementById("img").innerHTML='<table align="center"><tr><th><img src="image_1_1.jpeg"></th><th><img src="image_1_2.jpeg"></th><th><img src="image_1_3.jpeg"></th></tr><tr><th><img src="image_2_1.jpeg"></th><th><img src="image_2_2.jpeg"></th><th><img src="image_2_3.jpeg"></th></tr></table>';
+                        document.getElementById("final").innerHTML='<textarea id="scor" rows="1" cols="60"><b></b></textarea>';
+                        document.getElementById("scor").value=`Time Taken :${60-seconds} sec(s)`;
+                        document.getElementById("scor").style.textAlign="center";
+                        document.getElementById("input").innerHTML="";
+                    }
+                    else{
+                        a--;
+                        if(a<=0){
+                            alert("MISSION FAILED!!!");a=5;
+                            clearInterval(watch);
+                            document.getElementById("ribbon").innerHTML="";
+                            document.getElementById("img").innerHTML='<table align="center"><tr><th><img src="image_1_1.jpeg"></th><th><img src="image_1_2.jpeg"></th><th><img src="image_1_3.jpeg"></th></tr><tr><th><img src="image_2_1.jpeg"></th><th><img src="image_2_2.jpeg"></th><th><img src="image_2_3.jpeg"></th></tr></table>';
+                            document.getElementById("final").innerHTML='<textarea id="scor" rows="1" cols="50" disabled></textarea>'
+                            document.getElementById("scor").value=`Time Taken :${60-seconds} sec(s)`;
+                            document.getElementById("scor").style.textAlign="center";
+                            document.getElementById("input").innerHTML="";
+                            return 0;
+                        }
+                        alert(`${a} Attempts Left`);
+                        document.getElementById("att").innerHTML=`Attempts Left: ${a}`
+                        document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Order Eg- 1,2,3,4,5,6">';
+                    }
+            } 
+            function BOOM(){
+                var time=15;
+                setInterval(blast,1000);
+                function blast(){
+                    if(time>0){
+                        time--;
+                        document.getElementById("boom").innerHTML=`This message will self-destruct in ${time} seconds`;
+                    }
+                    else if(time==0){
+                        document.getElementById("rules").innerHTML='';
+                    }
+                }
+            }  
+        </script>
+        <style type="text/css">
+            @font-face {
+            font-family: 'Impossible-0';
+            src:  url('Impossible-0.ttf.woff') format('woff'),
+            url('Impossible-0.ttf.svg#Impossible-0') format('svg'),
+            url('Impossible-0.ttf.eot'),
+            url('Impossible-0.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Impossible-050';
+            src:  url('Impossible-050.ttf.woff') format('woff'),
+            url('Impossible-050.ttf.svg#Impossible-050') format('svg'),
+            url('Impossible-050.ttf.eot'),
+            url('Impossible-050.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Impossible-1000';
+            src:  url('Impossible-1000.ttf.woff') format('woff'),
+            url('Impossible-1000.ttf.svg#Impossible-1000') format('svg'),
+            url('Impossible-1000.ttf.eot'),
+            url('Impossible-1000.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: rgb(255, 255, 255);
+                font:20px "Impossible - 0";
+            }
+            .hd{
+                font:80px "Impossible - 0";
+                text-align:center;
+            }
+            .timer{
+                border:15px solid rgb(187, 94, 7);
+                background:rgb(165, 161, 139);
+                border-radius:15px;
+                text-align:center;
+            }
+            .clock{
+                font:50px "Impossible - 050";
+                text-shadow:0 0 10px rgb(0, 0, 0); 
+            }
+            button{
+                background-color: #880e0e;
+                border:3px solid #ce6a0c;
+                border-radius:15px;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                font: 16px Impact;
+                cursor: crosshair;
+                transition:0.2s;
+            }
+            button#sub{
+                border: none;
+                color: white;
+                padding: 50px;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                border-radius: 50%;
+                outline: none;
+                box-shadow: 0 9px #999;
+            }
+            button#sub:hover {background-color: #440606}
+            button#sub:active {
+                background-color: #440606;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            input[type=text],textarea{
+                background-color: #000000;
+                border:3px solid #ffffff;
+                border-radius:15px;
+                color: white;
+                padding:8px;
+            }
+            #pic{
+                background-color:rgb(175, 110, 26);
+                border:15px solid #5c0707;
+                border-radius:15px;
+                height:750px;
+                padding: 25px;
+                box-shadow:10px 10px 10px rgb(51, 38, 14)
+            }
+            #photo img,#photo1 img,#photo2 img,#photo3 img,#photo4 img,#photo5 img{
+                border:10px solid rgb(100, 24, 24);
+                width:300px;
+                height:200px;
+            }
+            #rules{
+                color:rgb(152, 209, 177);
+                font:20px Impact;
+                background-color:rgb(37, 34, 32);
+                border:15px solid #141212;
+                border-radius:15px;
+                padding: 25px;
+                box-shadow:10px 10px 10px rgb(68, 44, 44)
+            }
+        </style>
+    </head>
+    <body onLoad="window.scroll(0, 1500),BOOM()">
+        <h1 class="hd">MISSION ACCOMPLISHED ?</h1><br><hr><br>
+        <div class="timer"><span class="clock" id="ck">00:00:60</span><br><span id="srt"><button id="st" onclick="start()">START</button></span></div><br>
+        <div class="win">
+            <div id="pic"><div id="img"><table align="center"><tr><th id="photo"><img src="image_1_1.jpeg"></th><th id="photo1"><img src="image_2_1.jpeg"></th><th id="photo2"><img src="image_1_3.jpeg"></th></tr><tr><th id="photo3"><img src="image_2_3.jpeg"></th><th id="photo4"><img src="image_2_2.jpeg"></th><th id="photo5"><img src="image_1_2.jpeg"></th></tr></table></div><br><br>
+            <center><span id="final"></span></center>
+            <div id="ribbon"><center><span id="spn"><input type="text" id="ans" placeholder="Order Eg- 1,2,3,4,5,6" disabled></span><br><br>
+            <button onclick="check()" id="sub">PUSH</button><br><h3 id="att">Attempts Left: 5</h3></center></div></div>
+        </div><br><br>
+        <div id="rules" ><h1>Your Mission Should you Choose to accept is to find the order of the jumbled pictures before the timer runs out!</h1>
+            <ul>
+                <li>Type the order in the textbox just below the images with commas (,) and no spaces. For eg-2,1,4,3</li>
+                <li>The Big Red Submit Button will verify whether the order is correct or not</li>
+                <li>There are only 5 attempts</li>
+                <li>The order is from left to right<br>
+                    like this- <br>
+                    1 2 3<br>
+                    3 5 6
+                </li>
+                <li>Click on the START button to start your mission !</li><br>
+                <div style="color:red;text-align:center" id="boom">This message will self-destruct in 15 seconds</div>
+            </ul>
+        </div><br><br>
+    </body>
+</html>

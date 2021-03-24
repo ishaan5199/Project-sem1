@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MARVEL</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+        <link href="https://www.fontzip.com/storage/2019/02/22/mightyspidey/webfonts/mightyspidey.css" rel="stylesheet" />
+        <link rel="icon" href="logo-marvel5cea39ea7e935_5710644f4379976e84b5d13602009a3b.jpg" type="image/icon type">
+        <style type="text/css">
+            @font-face{
+                font-family:"Panthera";
+                src:url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("woff"),
+                url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("opentype"),
+                url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("truetype");
+            }
+            body{
+                background-color: rgb(175, 26, 26);
+            }
+            button{
+                background-color: #860d0d;
+                border:3px solid #570606;
+                border-radius:15px;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                font: 16px Marvel;
+            }
+            #int{
+                object-fit: cover;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .btn{
+                position:relative;
+            }
+            #one{
+                background: whitesmoke;
+                background-size:cover;
+                color:rgb(155, 36, 36);
+                font:bold 100px Marvel;
+                letter-spacing: -11px;
+            }  
+            #two{
+                color:whitesmoke;
+                text-decoration: overline;
+                letter-spacing: -5px;
+                font:bold 90px Marvel;
+                padding-bottom: 2px;
+                border-bottom: 9px solid whitesmoke;
+                line-height: 48px;
+            } 
+            .spec{
+                color:rgb(1, 10, 17);
+                font: bold 20px Marvel;
+                text-align:center;
+                text-decoration: underline;
+            }
+            .upcoming{
+                border:20px solid white;
+                border-radius:35px;
+                width:800px;
+                height:900px;
+                overflow:hidden;
+            } 
+            .list{
+                text-transform: uppercase;
+                background:url("https://bn1301files.storage.live.com/y4mf-dDHjepyn2a6xqHS4_WdrcvtBF2lLtoxI6oHyVVEf7P98ZnVbgdSG-9DKyuBsA549lZ20POfvXSwmlBdiHVTZk6zpsp4yxtRqF5nKuhzvQJIRIJ8F3cTYQ2dtYhR0HJJQ4yRWNHBd38giJQnv-l1iDivnossujGZv6duFFjEeQHjuBCninh6IuiD3LKVpr1?width=1920&height=1080&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+                color:whitesmoke;
+            }
+            .chrono{
+                font: oblique small-caps 30px Marvel;
+                text-decoration: underline;
+                text-align:center;
+                color:seashell;
+            }
+            .phase1{
+                font: small-caps 20px Panthera;
+                border: 10px solid rgb(88, 11, 11);
+                border-radius:35px;
+            }
+            .phase2{
+                font: small-caps 20px Panthera;
+                border: 10px solid rgb(88, 11, 11);
+                border-radius:35px;
+            }
+            .phase3{
+                font: small-caps 20px Panthera;
+                border: 10px solid rgb(88, 11, 11);
+                border-radius:35px;
+            }
+            .founder{
+                color:rgb(19, 8, 20);
+                text-align:center;
+                font:20px Stencil;
+                background:url("https://bn1301files.storage.live.com/y4mtpBBndjWndotX1rW8hgf9Nm3aAbBJ3xk7G_K89Fl5mhG2C2V5PFJo1AFyAL24xOML-8rYbGU03Oa69hE43EznYLaaJZnnl1R8qHbDgvSFqj-fjjoKBbHltg1-hOqAHyTNhOx50Zkz3WJO81wyj8PUNgYx2d7J093Sd0zzoLshyRuhGX_-sKje_lsx85ovSom?width=1300&height=970&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+            }
+            .founder2{
+                color:rgb(19, 8, 20);
+                text-align:center;
+                font:20px Stencil;
+                background:url("https://bn1301files.storage.live.com/y4mXQZ4UsrzMWgvmxT8lxt2Pntd1N8McrO4kykCuayDmAJkpNDwkCnD3MQ1xGFnUwGJNFa8kSxG0Oii3aqwqOHATIE2PJ9DkAz7YVRZABRjnrCrLPnXCD_KKCoL_F7D_ImiZJkUUFrH4axz4AEdu2DioXGDIguW1_ajqH_E0gEIUOjiKaU5QZP8_fg4VS7moNjB?width=1280&height=720&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+            }
+            .game{
+                border:5px solid green;
+                border-radius:35px;
+                text-align:center;
+                font:oblique 20px mightyspidey;
+                overflow: hidden;
+                background:rgb(73, 67, 63);
+            }
+            a:link {color: #ff6600;}
+            a:visited {color: #ffffff;}
+            a:hover {color: #ffcc00;}
+            a:active {color:rgb(105, 172, 60)};
+        </style>
+        <script language="javascript">
+            var i=1,j=0;
+            function load(){
+                document.body.style.overflow = 'hidden';
+            }
+            function change(){
+                i++;
+                if(i==2){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4miunXN3NXuaQ2Stp2tEu-6-tSDKz6PZQA76JPFr5RNhe1G1EZQOC5oiXKKpbbvpmfMZTgmTMe8wiQ3dXdnyR4nP9FvaYGikJZB-KSKBlb_ErTOJW_x2-tTWKXCnNfTKSGaAPxxw1sj07juP6VT4Ye42faHpUrFOlzM65HlNiMqiUvvsgVpRaDpqzojiK284pI?width=800&height=1000&cropmode=none" onclick="change()" title="Click to change Picture">';
+                }
+                else if(i==3){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4mTCP6WvVM5W_efspThz9YCOtQfCgYmoZPXNSR0gakIR5PV9rGxrekkIP2xDInvuPfUr6kviCBxwuWCPPS-wN43gDvfh_4f3GSxXqnICGqckfCxCLiTbrU6F5pbXGA2b6ZiyJkC3vMsyolpf-uyket_Dhpe3Yk5qNgeK2DRvy8k-9YXQIK1o7xc4tstrOBRsA5?width=800&height=1000&cropmode=none" onclick="change()" title="Click to change Picture">';
+                }
+                else if(i==4){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4m4QrQ30jxqiyLz9IwVaLD-8-78G0yzuUGoutfStULVOlUbibiSeeb_HNKxfycD4DMivk61SPjN1ZyZHHMIF4x7WWdXLmwq2aXyIEL2oO_vN4LAZVx9DMgplCnfQVcGmfAeCG1FzscUG7-JBKCC7jCFTifktnSjUfNFe4x2i7GYuP-M2BEvBe-WqqzR55h9Vwk?width=1024&height=576&cropmode=none" width="800" height="900"onclick="change()" title="Click to change Picture">';
+                }
+                else if(i==5){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4mh6D2MRhfAQfZb6PR2NradK6-JM4d1AMvX-U_G1QXUVsnCD0hGHGRLz1SpSidMyZUqeRojtKc_is-ueXLZIJtxYqmGSVk1N2yAkFRb6puswmlJs4BFdlSg5f4P0bux-jNQidoaCBQlj6M4k4A0he_sV7UxU4utfT2cvUc5FnTnRNU1k1oMCz4NMmoWVYJsnLi?width=800&height=900&cropmode=none" onclick="change()" title="Click to change Picture">';
+                    i=1;
+                }
+            }
+            function skip(){
+                j++;
+                document.getElementById("intro").innerHTML='';
+                document.body.style.overflow = 'scroll';
+            }
+            if(j==0){setTimeout(function(){
+                document.getElementById("intro").innerHTML='';
+                document.body.style.overflow = 'scroll';
+            }, 37000)};
+        </script>
+    </head>
+    <body onload="load()">
+        <div id="intro">
+            <video autoplay controls muted id="int">
+                <source type="video/mp4" src="marvel-vid.mp4">
+            </video>
+            <button class="btn" onclick="skip()">SKIP>></button>
+        </div>
+        <br><br><div class="logo" style="text-align: center;">
+            <table align="center" cellpadding="5" cellspacing="5"><tr><th id="one">MARVEL</th><th id="two">STUDIOS</th></tr></table>
+        </div><br><hr><br>
+        <div  class="spec">Currently Going On / Upcoming</div>
+        <center><div class="upcoming" id="up">
+           <img id="im" src="https://bn1301files.storage.live.com/y4mh6D2MRhfAQfZb6PR2NradK6-JM4d1AMvX-U_G1QXUVsnCD0hGHGRLz1SpSidMyZUqeRojtKc_is-ueXLZIJtxYqmGSVk1N2yAkFRb6puswmlJs4BFdlSg5f4P0bux-jNQidoaCBQlj6M4k4A0he_sV7UxU4utfT2cvUc5FnTnRNU1k1oMCz4NMmoWVYJsnLi?width=800&height=900&cropmode=none" onclick="change()" title="Click to change Picture">
+        </div></center><br><hr><br>
+        <div class="list">
+            <h2 class="chrono">Chronological Order of Films</h2>
+            <ul style="list-style-type:none;">
+                <div class="phase1"><p><li>IRON MAN (2008)</li>
+                <li>THE INCREDIBLE HULK (2008)</li>
+                <li>IRON MAN 2 (2010)</li>
+                <li>THOR (2011)</li>
+                <li>CAPTAIN AMERICA: THE FIRST AVENGER (2011)</li>
+                <li>MARVEL'S THE AVENGERS (2012)</li></p></div><br>
+                <div class="phase2">
+                    <p><li>IRON MAN 3 (2013)</li>
+                    <li>THOR: The DARK WORLD (2013)</li>
+                    <li>CAPTAIN AMERICA: THE WINTER SOLDIER (2014)</li>
+                    <li>GUARDIANS OF THE GALAXY (2014)</li>
+                    <li>AVENGERS: AGE OF ULTRON (2015)</li>
+                    <li>ANT-MAN (2015)</li></p>
+                </div><br>
+                <div class="phase3">
+                    <p><li>CAPTAIN AMERICA: CIVIL WAR (2016)</li>
+                    <li>DOCTOR STRANGE (2016)</li>
+                    <li>GUARDIANS OF THE GALAXY VOL. 2 (2017)</li>
+                    <li>SPIDER-MAN: HOMECOMING (2017)</li>
+                    <li>THOR: RAGNAROK (2017)</li>
+                    <li>BLACK PANTHER (2018)</li>
+                    <li>AVENGERS: INFINITY WAR (2018)</li>
+                    <li>ANT-MAN and THE WASP (2018)</li>
+                    <li>CAPTAIN MARVEL (2019)</li>
+                    <li>AVENGERS: ENDGAME (2019)</li>
+                    <li>SPIDER-MAN: FAR FROM HOME</li></p>
+                </div><br>
+            </ul>
+        </div><br><hr><br>
+        <div class="founder"><h1 align="center">Stan Lee</h1>
+        <center><img src="https://bn1301files.storage.live.com/y4mXHzbQml_qMKsFvXrBk52bqziCn2-lhs4gUJXJjkigNsoYsXHatG56KRCHzr_JQCqYYTYkIrcXYIKhBHnkEfqQ2wbVZan_jxMuYhDadNCql0gAE22vpYVsAxmZ1whi4E8UDIYc-j9Tnm1ADMEL5pVc219cTCyCHdQcXf_NNfwKmNWPCAx864t6IjW55-n3-Gn?width=330&height=432&cropmode=none"></center>
+        <p style="background-color: rgb(148, 139, 139);">Stan Lee was an American comic book writer, editor, publisher, and producer. He was Marvel Comics' primary creative leader for two decades, leading its expansion from a small division of a publishing house to a multimedia corporation that dominated comics and movie industries.<br><br>
+            In collaboration with others at Marvel—particularly co-writer/artists Jack Kirby and Steve Ditko—he co-created numerous popular fictional characters, including superheroes Spider-Man, the X-Men, Iron Man, Thor, the Hulk, Ant-Man, the Wasp, the Fantastic Four, Black Panther, Daredevil, Doctor Strange, Scarlet Witch, the Black Widow and Captain Marvel. These and other characters' introductions in the 1960s pioneered a more naturalistic approach than previously applied to superhero comics</p></div><br><hr><br>
+        <div class="founder2"><h1 align="center">KEVIN FEIGE</h1>
+        <center><img src="https://bn1301files.storage.live.com/y4mP6vW_jQB-gfhVCAWQ6iGXEpH9tvkOZ_ONzegwLLmmOOeowT7GRZgAR0R0v-GjGI2myowEaebAXXA-AhuTgWg99UvJftZhh8baR1l2qW0kGl5ZE1kos20wg6zax6f-cyw0XpmgtVLYB0E7QiXh2_p5tePRQA3_9_CFo5SEw92u5HPr1w7gheMjNIsiinSWLcu?width=400&height=600&cropmode=none"></center>
+        <p style="background-color: rgb(148, 139, 139);">Kevin Feige is an American film producer and television producer who has been the president of Marvel Studios and the primary creator and producer of the Marvel Cinematic Universe franchise since 2007.<br><br>
+            On the first X-Men film, Donner made Feige an associate producer, due to his knowledge of the Marvel Universe. Impressing Avi Arad (Former CEO and Founder of Marvel Studios), he was hired to work as his second-in-command at Marvel Studios that same year. In the mid-2000s, Feige realized that although Spider-Man and the X-Men had been licensed to Sony and 20th Century Fox, Marvel still owned the rights to the core members of the Avengers, and envisioned creating a shared universe just as creators Stan Lee and Jack Kirby had done with their comic books in the early 1960s.</p></div><br><hr><br>
+        <div class="game">
+            <a href="game1.html">Test Your Knowledge of MCU Characters</a>
+        </div>        
+    </body>
+</html>

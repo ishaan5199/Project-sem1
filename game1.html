@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Character Knowledge</title>
+        <link rel="icon" href="PS4-Controller-Step-10.png" type="image/icon type">
+        <script language="javascript">
+            var seconds=-1,minutes=0,hours=0,watch,a=5,score=5,counter=0;
+            function start(){
+                document.getElementById("srt").innerHTML='';
+                document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Name of Character" autofocus>';
+                watch=setInterval(timer,1000);
+                function timer(){
+                    seconds++;
+                    if(seconds<10)
+                        document.getElementById("ck").innerText=`0${hours}:0${minutes}:0${seconds}`;
+                    else if(seconds>=10&&minutes<10)
+                        document.getElementById("ck").innerText=`0${hours}:0${minutes}:${seconds}`;
+                    else if(seconds>=10&&minutes>=10)
+                        document.getElementById("ck").innerText=`0${hours}:${minutes}:${seconds}`;
+                    if(seconds%60==59){
+                        minutes++;
+                        seconds=-1;
+                    }
+                    if(minutes%60==59) {
+                        hours++;
+                        minutes=0;
+                    }
+                }
+            }
+            function check(){
+                if(counter==0){
+                    var or=document.getElementById("ans").value;
+                    if(or=="Iron Man"){
+                        counter++;
+                        document.getElementById("scr").innerHTML=`Score : ${score}`;
+                        alert("Correct Name!, click on NEXT to go to the next image");
+                    }
+                    else{
+                        score--;
+                        if(score<0){
+                            alert("You have exhausted all your attempts for this Character, go to the next image");score=0;counter++;
+                            document.getElementById("spn").innerHTML='<input type="text" id="ans" disabled>';
+                            return 0;
+                        }
+                        alert("Wrong Name!");
+                        document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Character Name">';
+                    }
+                }
+                else if(counter==1){
+                    var or=document.getElementById("ans").value;
+                    if(or=="Star Lord"){
+                        counter=counter+1;
+                        document.getElementById("scr").innerHTML=`Score : ${score + a}`;
+                        alert("Correct Name!, click on NEXT to go to the next image");score=score+a;a=5;
+                    }
+                    else{
+                        a--;
+                        if(a<0){
+                            alert("You have exhausted all your attempts for this character, go to the next image");a=5;counter++;
+                            document.getElementById("spn").innerHTML='<input type="text" id="ans" disabled>';
+                            return 0;
+                        }
+                        alert("Wrong Name!");
+                        document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Character Name">';
+                    }
+                }
+                else if(counter==2){
+                    var or=document.getElementById("ans").value;
+                    if(or=="The Vision"){
+                        counter=counter+1;
+                        document.getElementById("scr").innerHTML=`Score : ${score + a}`;
+                        alert("Correct Name!, click on NEXT to go to the next image");score=score+a;a=5;
+                    }
+                    else{
+                        a--;
+                        if(a<0){
+                            alert("You have exhausted all your attempts for this character, go to the next image");a=5;counter++;
+                            document.getElementById("spn").innerHTML='<input type="text" id="ans" disabled>';
+                            return 0;
+                        }
+                        alert("Wrong Name!");
+                        document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Character Name">';
+                    }
+                }
+                else if(counter==3){
+                    var or=document.getElementById("ans").value;
+                    if(or=="The Collector"){
+                        counter=counter+1;
+                        document.getElementById("scr").innerHTML=`Score : ${score + a}`;
+                        score=score+a;a=5;
+                        clearInterval(watch);
+                        alert("!!Congratulations!!, You have completed this game");
+                        document.getElementById("ribbon").innerHTML="";
+                        document.getElementById("img").innerHTML='<table align="center"><tr><th><img src="https://www.screengeek.net/wp-content/uploads/2020/03/iron-man-mcu.jpg" width="300" height="200"></th><th><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20201114/rs_1200x1200-201214124949-1200-Chris_Pratt-Guardians_Of_The_Galaxy_-_2014.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" width="300" height="200"></th><th><img src="https://www.denofgeek.com/wp-content/uploads/2021/01/wandavision_catch_up_vision_civil_war.jpg?resize=800%2C400" width="300" height="200"></th><th><img src="https://img2.looper.com/img/gallery/mcu-plotlines-that-never-went-anywhere/one-down-five-to-go-1585935943.jpg" width="300" height="200"></th></tr><tr><th>Iron Man</th><th>Star Lord</th><th>The Vision</th><th>The Collector</th></tr></table>'                        
+                        document.getElementById("final").innerHTML='<textarea id="scor" rows="1" cols="50"><b></b></textarea>';
+                        document.getElementById("scor").value=`Total Score : ${score} ; Time Taken : ${minutes} min(s) ${seconds} sec(s)`;
+                        document.getElementById("input").innerHTML="";
+                    }
+                    else{
+                        a--;
+                        if(a<0){
+                            alert("You have exhausted all your attempts for this character");a=5;
+                            alert("You have completed this game!");
+                            clearInterval(watch);
+                            document.getElementById("ribbon").innerHTML="";
+                            document.getElementById("img").innerHTML='<table align="center"><tr><th><img src="https://www.screengeek.net/wp-content/uploads/2020/03/iron-man-mcu.jpg" width="300" height="200"></th><th><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20201114/rs_1200x1200-201214124949-1200-Chris_Pratt-Guardians_Of_The_Galaxy_-_2014.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" width="300" height="200"></th><th><img src="https://www.denofgeek.com/wp-content/uploads/2021/01/wandavision_catch_up_vision_civil_war.jpg?resize=800%2C400" width="300" height="200"></th><th><img src="https://img2.looper.com/img/gallery/mcu-plotlines-that-never-went-anywhere/one-down-five-to-go-1585935943.jpg" width="300" height="200"></th></tr><tr><th>Iron Man</th><th>Star Lord</th><th>The Vision</th><th>The Collector</th></tr></table>'
+                            document.getElementById("final").innerHTML='<textarea id="scor" rows="1" cols="50" disabled></textarea>'
+                            document.getElementById("scor").value=`Total Score : ${score} ; Time Taken : ${minutes} min(s) ${seconds} sec(s)`;
+                            document.getElementById("input").innerHTML="";
+                            return 0;
+                        }
+                        alert("Wrong Name!");
+                        document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Name Character>';
+                    }
+                }
+            }  
+            function change(){
+                document.getElementById("spn").innerHTML='<input type="text" id="ans" placeholder="Enter Character Name">';
+                if(counter==1){
+                    document.getElementById("photo").innerHTML='<img src="https://akns-images.eonline.com/eol_images/Entire_Site/20201114/rs_1200x1200-201214124949-1200-Chris_Pratt-Guardians_Of_The_Galaxy_-_2014.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top">'
+                }
+                else if(counter==2){
+                    document.getElementById("photo").innerHTML='<img src="https://www.denofgeek.com/wp-content/uploads/2021/01/wandavision_catch_up_vision_civil_war.jpg?resize=800%2C400">'
+                }
+                else if(counter==3){
+                    document.getElementById("photo").innerHTML='<img src="https://img2.looper.com/img/gallery/mcu-plotlines-that-never-went-anywhere/one-down-five-to-go-1585935943.jpg">'
+                }
+            }  
+        </script>
+        <style type="text/css">
+            @font-face{
+                font-family:"Panthera";
+                src:url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("woff"),
+                url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("opentype"),
+                url("https://dafonttop.com/wp-data/p/732/14732/file/PantheraRegular-MVZ9J.ttf") format("truetype");
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: rgb(49, 45, 45);
+            }
+            .hd{
+                font:50px Panthera;
+                text-align:center;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+            @keyframes glow{
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #db0707, 0 0 40px #a80606, 0 0 50px #850303, 0 0 60px #5e0606, 0 0 70px #330202;
+                }
+                to {
+                    text-shadow: 0 0 20px #fff, 0 0 30px #a80606, 0 0 40px #a80606, 0 0 50px #a80606, 0 0 60px #a80606, 0 0 70px #a80606, 0 0 80px #ff4da6;
+                }
+            }
+            .timer{
+                border:15px solid rgb(36, 20, 37);
+                background:rgb(69, 8, 82);
+                border-radius:35px;
+                text-align:center;
+            }
+            .clock{
+                font:50px Calibri;
+                text-shadow:0 0 10px rgb(0, 0, 0); 
+            }
+            button{
+                background-color: #4CAF50;
+                border:3px solid #4CAF50;
+                border-radius:25px;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                font: 16px Impact;
+                cursor: crosshair;
+                transition: all 0.5s;
+            }
+            button#n{
+                width:100px;
+            }
+            button#n span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            button#n span:after {
+                content: '\003E';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            button#n:hover span {
+                padding-right: 25px;
+            }
+            button#n:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            input[type=text],textarea{
+                background-color: #4CAF50;
+                border:3px solid #4CAF50;
+                border-radius:25px;
+                color: white;
+                padding:8px;
+            }
+            #pic{
+                background-color:rgb(175, 26, 26);
+                border:15px solid #330202;
+                border-radius:25px;
+                height:450px;
+                padding: 25px;
+                box-shadow:10px 10px 10px rgb(68, 5, 83)
+            }
+            #photo img{
+                border:5px dashed black;
+                border-radius:25px;
+                width:500px;
+                height:300px;
+            }
+            #rules{
+                color:rgb(152, 209, 177);
+                font:20px Marvel;
+                background-color:rgb(97, 55, 36);
+                border:15px solid #141212;
+                border-radius:25px;
+                padding: 25px;
+                box-shadow:10px 10px 10px rgb(5, 83, 22)
+            }
+        </style>
+    </head>
+    <body onLoad="window.scroll(0, 1500)">
+        <h1 class="hd">Do you know the character ?</h1><br><hr><br>
+        <div class="timer"><span class="clock" id="ck">00:00:00</span><br><span id="srt"><button id="st" onclick="start()">START</button></span></div><br>
+        <div class="win">
+            <div id="pic"><div id="img"><table align="center"><tr><th id="photo"><img src="https://www.screengeek.net/wp-content/uploads/2020/03/iron-man-mcu.jpg"></th></tr></table></div><br><br>
+            <center><span id="final"></span></center>
+            <div id="ribbon"><center><span id="spn"><input type="text" id="ans" placeholder="Enter Name of character" disabled></span>&nbsp;
+            <button onclick="check()" id="sub">Submit</button>&nbsp;<button onclick="change()" id="n"><span>NEXT</span></button><br><h3><b><span id="scr">Score : 0</span></b></h3></center></div></div>
+        </div><br><br>
+        <div id="rules"><h1>Rules : </h1>
+            <ul>
+                <li>Type the name of the character in text box given below the image</li>
+                <li>Submit button will verify whether the entered name is correct or not.</li>
+                <li>NEXT will show the next character.</li>
+                <li>5 points are awarded if you get the name right in the first attempt, for every subsequent attempt 1 point will be deducted.</li>
+                <li>The name should start with a Capital Letter and if the name contains more than one word every first letter should be capital</li>
+                <li>Click on the START button to start playing the game!</li><br>
+            </ul>
+        </div><br><br>
+    </body>
+</html>

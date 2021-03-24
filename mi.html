@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mission Impossible</title>
+        <link rel="icon" href="97c6663eadef022f1b4f183f146f5d1c.jpg" type="image/icon type">
+        <style type="text/css">
+            @font-face {
+            font-family: 'Impossible-0';
+            src:  url('Impossible-0.ttf.woff') format('woff'),
+            url('Impossible-0.ttf.svg#Impossible-0') format('svg'),
+            url('Impossible-0.ttf.eot'),
+            url('Impossible-0.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Impossible-050';
+            src:  url('Impossible-050.ttf.woff') format('woff'),
+            url('Impossible-050.ttf.svg#Impossible-050') format('svg'),
+            url('Impossible-050.ttf.eot'),
+            url('Impossible-050.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Impossible-1000';
+            src:  url('Impossible-1000.ttf.woff') format('woff'),
+            url('Impossible-1000.ttf.svg#Impossible-1000') format('svg'),
+            url('Impossible-1000.ttf.eot'),
+            url('Impossible-1000.eot?#iefix') format('embedded-opentype'); 
+            font-weight: normal;
+            font-style: normal;
+            }
+            .logo{
+                text-align:center;
+                font: 100px "Impossible - 050";
+            }
+            .about{
+                background: url("https://bn1301files.storage.live.com/y4m8rIDW87qkWUJBvDaU3pTsV_hC_XjqBNINgDyBx_QsoU0GKDUAtYge5qdCrPHt81tAgQnuSAIRXjN36cY0RNna3B1ZbIi9-FrWrVq_d_wGN4u3i3FSmIqxd1yfVtlozbqgvYE5vNXZx6_EaSAzw4bmnyUzvwDlDN6WrJ8Ro7i8B4rbnc9SbnMI9xEZLHTPo8p?width=1200&height=630&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+                font: 20px Impact;
+                height:300px;
+                vertical-align: bottom;
+                display: table-cell;
+            }
+            .spec{
+                text-align:center;
+                text-decoration: underline;
+                font: 20px "Impossible - 0";
+            }
+            .upcoming{
+                border:20px solid rgb(180, 64, 10);
+                border-radius:35px;
+                width:1000px;
+                height:600px;
+                overflow:hidden;
+            }
+            .mid{
+                background:lightsalmon;
+                box-shadow:5px 5px 10px black;
+            }
+            .btn{
+                position:relative;
+            }
+            #int{
+                object-fit: cover;
+                width:1000px;
+                height:600px;
+            }
+            .chrono{
+                background:rgb(73, 67, 63);
+                color:azure;
+                font: oblique small-caps 30px "Impossible - 0";
+                box-shadow:10px 10px 10px black;
+            }
+            button{
+                background-color: #880e0e;
+                border:3px solid #ce6a0c;
+                border-radius:15px;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                font: 16px "Impossible - 0";
+                transition:0.2s;
+            }
+            li{
+                width:300px;
+                background-color:rgb(92, 87, 83);;
+                transition: width 1s;
+            }
+            li:hover{
+                width:400px;
+            }
+            #one:hover span{display:none}
+            #one:hover:before {content:"Part 1 release year : 1996"}
+            #two:hover span{display:none}
+            #two:hover:before {content:"Part 2 release year : 2000"}
+            #three:hover span{display:none}
+            #three:hover:before {content:"Part 3 release year : 2006"}
+            #four:hover span{display:none}
+            #four:hover:before {content:"Ghost Protocol release year : 2011"}
+            #five:hover span{display:none}
+            #five:hover:before {content:"Rogue Nation release year : 2015"}
+            #six:hover span{display:none}
+            #six:hover:before {content:"Fallout release year : 2018"}
+            #seven:hover span{display:none}
+            #seven:hover:before {content:"Part 7 Tentative release year : 2022"}
+            .prominent_director{
+                color:rgb(19, 8, 20);
+                text-align:center;
+                font:20px Stencil;
+                background:url("https://bn1301files.storage.live.com/y4mIE--LgheMTM4HHkJVI6AtW12yIwsn_U4siRsa45ecjZhGmC-3z2aj3fKPf-h6qsekXz3QEEU50O5UsOl4PWzKv8RX_nXFGNQOFNa2C1e2lm3RW49QQ7zFoUAZeBQOOW25694huIQ18WmFFCcCH58UrhKIKy41Eyi-nTXeDrcOXoFmVdAtlgoPB4xTUnRdon7?width=1000&height=566&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+                box-shadow:10px 10px 10px black;
+            }
+            .game{
+                border:5px solid green;
+                border-radius:35px;
+                text-align:center;
+                font:oblique 20px "Impossible - 1000";
+                overflow: hidden;
+                background:rgb(48, 21, 3);
+            }
+            a:link {color: #ff6600;}
+            a:visited {color: #ffffff;}
+            a:hover {color: #ffcc00;}
+            a:active {color:rgb(105, 172, 60)};
+        </style>
+        <script language="javascript">
+            var i=1;
+            function change(){
+                i++;
+                if(i==2){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4mfBVtz58d7EHI02y2lx20L_MRZPq5_X0MxgbFkjgvzmxgr44fT7anSmkQ6S9PvQAifOAWkB-qUrIbzEjmmR0ecvWk85L57i336_KPn9RC1e7jSAqtDvnSdUSvLpqCasgpfYlZcrFV0hdCGvaWOqxjbMcYRA-UfdqcI2QVmv7TYZrbneJP6cEVNVu8hS_Po3Sm?width=1035&height=690&cropmode=none" onclick="change()" title="Click to Change Picture">';
+                }
+                else if(i==3){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4myGmjJfdbz76jg66oFIq1hAt8OtXBza4BddWk2jbhy0meAp277Cb4_aFmXq5eAzurCec3hasKONCSoHAPvIg-eeNGuYZecYwjykouYYVgjQZOrEBgD89TSD4JTWN8ZHV2gmt05cI2bwKi9WoaDFAPYz1BtbMqXfBJyfwkzl69E8A1Ex836lmebPM7d3os05y8?width=1000&height=600&cropmode=none" onclick="change()" title="Click to Change Picture">';
+                }
+                else if(i==4){
+                    document.getElementById("up").innerHTML='<img src="https://bn1301files.storage.live.com/y4mpGs8B0X6YR60ELbeTYBMi3kaTFBYUdTvAvp-SUFvfimFakeDdp01YMXww_cP8Q_8xdRNfOJYlc4YRuGdeSCmnDm2aD7Zv0LPzAQneyKNyjbnKmcJ45vUMycogjzDPhYIsYDtQEMNtiIftWXFEgla96fYMqmlbjSNZDtg6okveFDLVbTeebk32Plpq8rt20ht?width=1000&height=600&cropmode=none" onclick="change()" title="Click to Change Picture">';
+                    i=1;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="logo">MISSION IMPOSSIBLE</div><br><hr><br>
+        <div class="about">
+            <p style="background:lightgray">Mission: Impossible is a series of American action spy films based on and a follow-on from the television series of the same name created by Bruce Geller. The series is mainly produced by and stars Tom Cruise, whose character is Ethan Hunt, an agent of the Impossible Missions Force (IMF).<br>
+                The sixth and most recent film, titled Mission: Impossible – Fallout, was released on July 27, 2018. The seventh and the upcoming film, with the working title Mission: Impossible 7, is scheduled to release on November 19, 2021. </p>
+        </div><br><hr><br>
+        <div class="mid"><br><br><div class="spec">Last Film/Currently Filming (MISSION IMPOSSIBLE 7)</div>
+        <center><div class="upcoming" id="up">
+            <button class="btn" onclick="change()">PHOTOS>></button>
+            <video autoplay controls muted id="int">
+                <source  src="mi-vid.3gp"> 
+            </video>   
+        </div></center><br><br></div><br><hr><br>
+        <div class="chrono"><p>Chronological Order of Films</p>
+        <div ><ul style="list-style-type: square;"><li id="one"><span>Part 1</span></li><br><li id="two"><span>Part 2</span></li><br><li id="three"><span>Part 3</span></li><br><li id="four"><span>Ghost Protocol</span></li><br><li id="five"><span>Rogue Nation</span></li><br><li id="six"><span>Fallout</span></li><br><li id="seven"><span>Part 7</span></li><br></ul></div></div>
+        <div class="prominent_director"><h1 align="center" style="font:30px 'impossible - 050';color:whitesmoke">Christopher McQuarrie</h1>
+            <center><img src="https://bn1301files.storage.live.com/y4mcIJ11oQ6DABEnqJB44iQABjxeUqwnn9vl9x_OeYK0eSXX6FnFcGQuzetjsC5cEyYX7UseluMWEyfzWxP4UMDl4dOKODsVUx8uGLJg-UcbEdVVdlqqQnTDnCMSbpSrIPVjesmMQLOiMZ0vbk6mA2Qv82Nd5ORb6Z2WaLuBtFgsrhIIEHXpoFhwXIpku0iV8Q4?width=1080&height=1440&cropmode=none" width="330" height="432"></center>
+            <p style="background-color: rgb(151, 95, 12);">Christopher McQuarrie is an American screenwriter, film director and producer. He received the BAFTA Award, Independent Spirit Award, and Academy Award for Best Original Screenplay for the neo-noir mystery film The Usual Suspects (1995).<br><br>
+                He is a frequent collaborator with Tom Cruise, having written and directed the action films Jack Reacher (2012), Mission: Impossible – Rogue Nation (2015), and Mission: Impossible – Fallout (2018). He was also part of the writing team on the films Valkyrie (2008), Edge of Tomorrow (2014), The Mummy (2017), and Top Gun: Maverick (2021).
+                Inside the Mission Impossible Franchise, he has directed 2 films (out of 6) and currently directing the 7<sup>th</sup>part. Future projects include Mission Impossible 8.
+            </p></div><br><hr><br>
+        <div class="game">
+            <a href="game2.html">MISSION - O1</a>
+        </div>
+    </body>
+</html>

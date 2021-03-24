@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Star Wars</title>
+        <link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="81YyvsSQfUL._AC_SX355_.jpg" type="image/icon type">
+        <style type="text/css">
+            html{
+                background-color: black;
+                color:whitesmoke;
+            }
+            #logo{
+                font: 80px "Star Jedi";
+            }
+            #star-wars {
+                display: flex;
+                justify-content: center;
+                height: 800px;
+                perspective: 400px;
+                color: #feda4a;
+                font-family: 'Pathway Gothic One', sans-serif;
+                font-size: 500%;
+                font-weight: 600;
+                letter-spacing: 6px;
+                line-height: 150%;
+                text-align: justify;
+            }
+            .crawl {
+                position: relative;
+                top: -100px;
+                transform-origin: 50% 100%;
+            } 
+            @keyframes crawl {
+                0% {
+                    top: 0;
+                    transform: rotateX(20deg) translateZ(0);
+                }
+                100% { 
+                    top: -6000px;
+                    transform: rotateX(25deg) translateZ(-2500px);
+                }
+            }  
+            .crawl {
+                position: relative;
+                transform-origin: 50% 100%;
+                animation: crawl 30s linear;
+            }
+            .founder{
+                color:aqua;
+                font: 20px Impact;
+                text-align:center;   
+                background:url("https://bn1301files.storage.live.com/y4m_WYdMqi9TiGVww5hEP0xUUWRuTS1vBup0OyNEZJkaD2N-dm72YOPDJHLj7FbLezYZqh5Hka73kXhPZ1MOEnWiv7fP8ZprLWQY7yjAfg6AoGUyJVnkzOxS5XJnarOG2hQAf7fHTq3JTKRIMW5umw0sM_fGbu5mmtjeFGTlemZPdQfaBAL7hVTrsA-VqLuDa-j?width=1920&height=1080&cropmode=none") no-repeat fixed center;    
+                background-size:cover;
+            }
+            .vid{
+                border:10px solid white;
+                border-radius:35px;
+                overflow:hidden;
+            }
+            .list{
+                font:20px "Star Jedi";
+                text-decoration: underline ;
+                text-transform:lowercase;
+                background:url("https://bn1301files.storage.live.com/y4mpN0u6Iu_-NfcPKLAeWO_3_ChN3wr6yjB3GZYIvzW5ZRVSBh1hG0mWZJ472Ml-HKP2zEyPFvjBr1AY3MoJRcxZkKWJ3k3UqYKYWmZqOwR0ejjrFccoykO1JuIsSiOg-kPuGn-SWpgBPRqpUh_NqQ2JPKFJdZHC0f3-HXCq3atcG8t8bqvOWA3uvtoi0pZdcoO?width=1920&height=1080&cropmode=none") no-repeat fixed center;
+                background-size:cover;
+            }
+            a:link {color: #ff6600;}
+            a:visited {color: #ffffff;}
+            a:hover {color: #ffcc00;}
+            a:active {color:rgb(105, 172, 60)};
+        </style>
+        <script language="javascript">
+            function load(){
+                document.body.style.overflow = 'hidden';
+            }
+            setTimeout(function(){
+                document.getElementById("fade").innerHTML='';
+                document.getElementById("logo").innerHTML='<h1 align="center">star wars</h1>';
+                document.body.style.overflow = 'scroll';
+            }, 15000);
+            
+        </script>
+    </head>
+    <body onload="load()">
+        <div id="logo"></div>
+        <div id="fade">
+        <section id="star-wars">
+            <div class="crawl">
+                <div class="title">
+                    <h1 align="center" id="logo">STAR WARS</h1>
+                </div>
+                <p>
+                    Star Wars is a multi-genre mythology and multimedia franchise created by George Lucas in 1976. Comprising of movies, novels, comics, video games, toys, and numerous television series,
+                    As one of the foremost examples of the space opera subgenre of science fiction, Star Wars has become part of mainstream popular culture, as well as being one of the highest-grossing series of all time.
+                </p>
+            </div>
+        </section></div>
+        <div class="vid">
+            <video autoplay muted>
+                <source type="video/mp4" src="sw-vid.mp4">
+            </video>
+        </div><hr>
+        <div class="list">
+            <h2 class="chrono">Chronological Order of Films</h2>
+            <ol>
+                <li>Star Wars Episode 1 : The Phantom Menace</li><br>
+                <li>Star Wars Episode 2 : Attack of the Clones</li><br>
+                <li>Star Wars The Clone Wars</li><br>
+                <li>Star Wars The Clone Wars : Season 1-6 and Season 7(under Disney) - TV SHOW</li><br>
+                <li>Star Wars Episode 3 : Revenge of the Sith</li><br>
+                <li>Star Wars Jedi Fallen Order - VIDEO GAME</li><br>
+                <li>Solo : A Star Wars Story</li><br>
+                <li>Star Wars Rebels : Season 1-4 - TV SHOW</li><br>
+                <li>Rogue One : A Star Wars Story</li><br>
+                <li>Star Wars Episode 4 : A New Hope</li><br>
+                <li>Star Wars Episode 5 : The Empire Strikes Back</li><br>
+                <li>Star Wars Episode 6 : Return of The Jedi</li><br>
+                <li>Star Wars Squadrons - VIDEO GAME</li><br>
+                <li>The Mandalorian : Season 1-2 - TV SHOW</li><br>
+                <li>Star Wars Battlefront 2 - VIDEO GAME</li><br>
+                <li>Star wars Resistance : Season 1 - TV SHOW </li><br>
+                <li>Star Wars Episode 7 : The Force Awakens</li><br>
+                <li>Star Wars Episode 8 : The Last Jedi</li><br>
+                <li>Star Wars Episode 9 : The Rise of Skywalker</li>
+            </ol><hr>
+        </div>
+        <div class="founder"><h1 align="center">George Lucas</h1>
+        <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/George_Lucas_cropped_2009.jpg/330px-George_Lucas_cropped_2009.jpg"></center>
+        <p>George Walton Lucas Jr is an American film director, producer, screenwriter, and entrepreneur. He is best known as the creator of Star Wars and the Indiana Jones.
+        He also founded LucasFilm (The main film studio), LucasArts (A studio focused on Video Game and novel adaptations), and Industrial Light and Magic (A major visual effects studio with contribution in franchises like StarWars, Indiana Jones, Harry Potter, Pirates of the Carribean, Terminator and many more....)<br><br>
+        Lucas' directorial debut was THX 1138 (1971), based on his earlier student short Electronic Labyrinth: THX 1138 4EB, which was a critical success but a financial failure. His next work as a writer-director was the film American Graffiti (1973), inspired by his youth in the early 1960s Modesto, California, and produced through the newly founded Lucasfilm. The film was critically and commercially successful and received five Academy Award nominations, including Best Picture.<br><br> 
+        His next film, the epic space opera Star Wars (1977),it was a surprise hit, becoming the highest-grossing film at the time, winning six Academy Awards and sparking a cultural phenomenon.<br><br> Lucas produced and co-wrote the sequels The Empire Strikes Back (1980) and Return of the Jedi (1983).<br> With director Steven Spielberg, he created, produced, and co-wrote the Indiana Jones films Raiders of the Lost Ark (1981), The Temple of Doom (1984), The Last Crusade (1989) and The Kingdom of the Crystal Skull (2008). Lucas is also known for his collaboration with composer John Williams, who was recommended to him by Spielberg, and with whom he has worked with for all the films in both of these franchises.   
+        <br><br>In 2012, he sold LucasFilm to Disney for 4 Billion US$</p></div> 
+        <hr>
+    </body>
+</html>
